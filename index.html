@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Digital Clock -->
+        <div class="card digital-clock">
+            <p class="time-text">
+                <span id="digital-hours">12</span>
+                <span class="blinking-colon">:</span>
+                <span id="digital-minutes">00</span>
+                <span id="digital-ampm">AM</span>
+            </p>
+        </div>
+
+        <!-- World Clock -->
+        <div class="card world-clock">
+            <h3>World Clock</h3>
+            <select id="world-timezone">
+                <option value="-4">New York (UTC-4)</option>
+                <option value="0">London (UTC+0)</option>
+                <option value="1">Berlin (UTC+1)</option>
+                <option value="5.5">India (UTC+5:30)</option>
+                <option value="8">China (UTC+8)</option>
+            </select>
+            <p class="time-text">
+                <span id="world-hours">12</span>
+                <span class="blinking-colon">:</span>
+                <span id="world-minutes">00</span>
+                <span id="world-ampm">AM</span>
+            </p>
+        </div>
+
+        <!-- Stopwatch -->
+        <div class="card stopwatch">
+            <h3>Stopwatch</h3>
+            <p class="time-text" id="stopwatch-time">00:00:00</p>
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="resetStopwatch()">Reset</button>
+        </div>
+
+        <!-- Timer -->
+        <div class="card timer">
+            <h3>Timer</h3>
+            <input type="number" id="timer-hours" placeholder="HH">
+            <input type="number" id="timer-minutes" placeholder="MM">
+            <input type="number" id="timer-seconds" placeholder="SS">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="resetTimer()">Reset</button>
+            <p class="time-text" id="timer-display">00:00:00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
